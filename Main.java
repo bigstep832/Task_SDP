@@ -28,7 +28,6 @@ public class Main {
         System.out.println("SUMMARY: " + passed + "/7 PASS");
     }
 
-    // Compare the real output with an independent expected string.
     private static int check(String id, String classes, Shape shape, String expected) {
         String actual = executeSafely(shape);
         boolean passed = expected.equals(actual);
@@ -41,7 +40,6 @@ public class Main {
         return passed ? 1 : 0;
     }
 
-    // Keep the original reference and state before changing the renderer.
     private static int checkSwitch(Renderer vector, Renderer raster) {
         Circle circle = new Circle("C5", 2, vector);
         Circle original = circle;
@@ -76,7 +74,6 @@ public class Main {
         return passed ? 1 : 0;
     }
 
-    // A renderer error becomes a failed check instead of stopping all tests.
     private static String executeSafely(Shape shape) {
         try {
             return shape.execute();
