@@ -1,4 +1,3 @@
-// Abstraction: stores identity and the interface-typed bridge reference.
 public abstract class Shape {
     private final String id;
     private Renderer implementation;
