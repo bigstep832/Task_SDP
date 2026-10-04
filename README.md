@@ -129,40 +129,11 @@ Expected final summary:
 ```text
 SUMMARY: 7/7 PASS
 ```
-
-## Extension Step
-
-The first working version contains:
-
-- `VectorRenderer`
-- `RasterRenderer`
-- T1–T5
-
-After this version is committed, `AsciiRenderer` is added as the third implementation.
-
-For the extension step, only these Java source changes should be present:
-
-- new `src/AsciiRenderer.java`
-- updated `src/Main.java`
-
-The source difference is saved in:
-
-```text
-extension.diff
 ```
-
-Example command:
-
-```bash
-git diff BASE_COMMIT HEAD -- src > extension.diff
-```
-
-Replace `BASE_COMMIT` with the hash of the first working version.
 
 ## Project Files
 
 ```text
-src/
     Main.java
     Shape.java
     Circle.java
@@ -171,10 +142,3 @@ src/
     VectorRenderer.java
     RasterRenderer.java
     AsciiRenderer.java
-
-sources.txt
-README.md
-demo-output.txt
-extension.diff
-report.pdf
-```
